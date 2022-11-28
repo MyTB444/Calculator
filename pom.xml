@@ -87,7 +87,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>Driver</mainClass>
+              <mainClass>Entry</mainClass>
             </manifest>
           </archive>
         </configuration>
