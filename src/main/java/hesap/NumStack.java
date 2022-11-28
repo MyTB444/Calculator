@@ -7,6 +7,8 @@ public class NumStack {
   Stack numStack;
   float number = 0;
 
+  
+  
   public NumStack() {
     if (numStack == null) {
       numStack = new Stack();
