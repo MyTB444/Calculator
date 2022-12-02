@@ -36,8 +36,8 @@ public class OpStack {
    *
    */
 
-  public void push(Symbol newSymbol) {
-    opStack.push(new Entry(newSymbol));
+  public void push(Symbol other) {
+    opStack.push(new Entry(other));
   }
 
 }

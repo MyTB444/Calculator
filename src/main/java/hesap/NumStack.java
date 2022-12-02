@@ -39,8 +39,8 @@ public class NumStack {
    *
    */
 
-  public void push(float newVal) {
-    numStack.push(new Entry(newVal));
+  public void push(float number) {
+    numStack.push(new Entry(number));
   }
 
 }
