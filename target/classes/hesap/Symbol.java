@@ -21,4 +21,22 @@ public enum Symbol {
     return string;
   }
   
+  public static Symbol getSymbol(Character c) {
+    switch (c) {
+      case '+':
+        return Symbol.PLUS;
+      case '-':
+        return Symbol.MINUS;
+      case '*':
+        return Symbol.TIMES;
+      case '{':
+        return Symbol.LEFT_BRACKET;
+      case '}':
+        return Symbol.RIGHT_BRACKET;
+      case '/':
+        return Symbol.DIVIDE;
+      default:
+        return Symbol.INVALID;
+    }
+  }
 }

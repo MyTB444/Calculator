@@ -13,13 +13,13 @@ public class StrStack {
   }
 
   /**
-   * Pop the top element of the stack as type of String
+   * Pop the top element of the stack as type of String.
    *
    * @return the symbol
    *
    */
 
-  public String Pop() {
+  public String pop() {
     Entry poppedEntry = strStack.pop();
     String str = null;
     try {
@@ -30,7 +30,7 @@ public class StrStack {
     return str;
   }
 
-  public void Push(String str) {
+  public void push(String str) {
     strStack.push(new Entry(str));
   }
 }

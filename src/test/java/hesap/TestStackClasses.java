@@ -37,14 +37,14 @@ class TestStackClasses {
   @Test // Test5: Testing for StrStack class Push method to see if we can push.
   public void testStrStackPush() throws Exception {
     StrStack strStack = new StrStack();
-    strStack.Push("testing");
-    assertEquals(strStack.Pop(), "testing");
+    strStack.push("testing");
+    assertEquals(strStack.pop(), "testing");
   }
 
   @Test // Test6: Testing for EmptyStackException throw if the StrStack is empty.
   public void testStrStackEmptyPop() {
     StrStack strStack = new StrStack();
-    assertThrows(EmptyStackException.class, () -> strStack.Pop());
+    assertThrows(EmptyStackException.class, () -> strStack.pop());
   }
 
   @Test // Test 7: Testing for multiple push and pop
