@@ -2,9 +2,20 @@ package hesap;
 
 import java.util.EmptyStackException;
 
+/**
+ * OpStack is a list of symbols with a first-in last-out principle.
+ *
+ * @author Eren
+ *
+ */
+
 public class OpStack {
 
   Stack opStack;
+
+  /**
+   * Constructor for opStack.
+   */
 
   public OpStack() {
     if (opStack == null) {

@@ -1,10 +1,16 @@
 package hesap;
 
-/**
- * Mathematical Expression Evaluator using two Stacks Version: 1.1
- */
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Mathematical Expression Evaluator using two Stacks Version: 1.1.
+ *
+ * @author Eren
+ *
+ */
 
 class StandardCalc implements Calculator {
   static List<Symbol> precedence;
@@ -20,7 +26,7 @@ class StandardCalc implements Calculator {
   }
 
   /**
-   * Check if op2 has higher precedence than op1
+   * Check if op2 has higher precedence than op1.
    */
   private static boolean hasPrecedence(Symbol op1, Symbol op2) {
     return precedence.indexOf(op2) >= precedence.indexOf(op1);
@@ -44,6 +50,12 @@ class StandardCalc implements Calculator {
           throw new Exception("divide by zero");
         }
         result = val2 / val1;
+        break;
+
+      default:
+        throw new Exception("invalid symbol");
+
+
     }
 
     return result;
@@ -56,14 +68,14 @@ class StandardCalc implements Calculator {
     char[] tokens = expression.toCharArray();
 
     for (Character c : tokens) {
-      if (c == ' ')
+      if (c == ' ') {
         continue;
-
+      }
       if (c >= '0' && c <= '9') { // digit
         values.push(Float.parseFloat(c.toString()));
       } else { // operator
         Symbol s = Symbol.getSymbol(c);
-        
+
         while (opStack.opStack.size() != 0 && hasPrecedence(s, opStack.opStack.top().getOther())) {
           try {
             values.push(getValue(values.pop(), values.pop(), opStack.pop()));
@@ -71,7 +83,7 @@ class StandardCalc implements Calculator {
             e.printStackTrace();
           }
         }
-        
+
         opStack.push(s);
       }
 
@@ -86,8 +98,11 @@ class StandardCalc implements Calculator {
     }
 
     // Last value in valueStack is final answer
-    if (values.numStack.size() != 0)
+    if (values.numStack.size() != 0) {
       return values.pop();
+
+    }
+
     return 0;
   }
 }

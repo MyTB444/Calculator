@@ -2,12 +2,21 @@ package hesap;
 
 import java.util.EmptyStackException;
 
+/**
+ * NumStack is a list of numbers with a first-in last-out principle.
+ *
+ * @author Eren
+ *
+ */
+
 public class NumStack {
 
   Stack numStack;
   float number = 0;
 
-
+  /**
+   * Constructor for numstack.
+   */
 
   public NumStack() {
     if (numStack == null) {

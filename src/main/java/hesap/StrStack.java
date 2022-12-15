@@ -2,10 +2,19 @@ package hesap;
 
 import java.util.EmptyStackException;
 
+/**
+ * StrStack is a list of strings with a first-in last-out principle.
+ *
+ * @author Eren
+ *
+ */
 public class StrStack {
 
   Stack strStack;
 
+  /**
+   * Constructor for strStack.
+   */
   public StrStack() {
     if (strStack == null) {
       strStack = new Stack();

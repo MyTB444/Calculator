@@ -21,6 +21,13 @@ public enum Symbol {
     return string;
   }
   
+  /**
+   * Gets a symbol from character.
+   *
+   * @param c
+   *
+   */
+  
   public static Symbol getSymbol(Character c) {
     switch (c) {
       case '+':
