@@ -6,11 +6,11 @@ package hesap;
 
 import java.util.*;
 
-class StandartCalc implements Calculator {
+class StandardCalc implements Calculator {
   static List<Symbol> precedence;
   private NumStack values;
 
-  public StandartCalc() {
+  public StandardCalc() {
     values = new NumStack();
     precedence = new ArrayList<Symbol>();
     precedence.add(Symbol.PLUS);
@@ -75,7 +75,6 @@ class StandartCalc implements Calculator {
         opStack.push(s);
       }
 
-      // System.out.println(valueStack);
     }
 
     while (opStack.opStack.size() != 0) {

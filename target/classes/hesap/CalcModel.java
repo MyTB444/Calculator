@@ -2,11 +2,11 @@ package hesap;
 
 public class CalcModel {
 
-  private StandartCalc standartCalculator;
+  private StandardCalc standartCalculator;
   private RevPolishCalc revPolishCalculator;
 
   public CalcModel() {
-    standartCalculator = new StandartCalc();
+    standartCalculator = new StandardCalc();
     revPolishCalculator = new RevPolishCalc();
   }
 
